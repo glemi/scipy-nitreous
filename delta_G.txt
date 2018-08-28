@@ -1,0 +1,199 @@
+
+Surface: Cu
+     Cu_HOCO ~ Cu_HCOOH     : U0 = -0.11
+    Cu_HCOOH ~ Cu_CO        : U0 = +nan
+       Cu_CO ~ Cu_HCO       : U0 = -1.15
+      Cu_HCO ~ Cu_COH       : U0 = +nan
+      Cu_COH ~ Cu_OCH2      : U0 = +0.26
+     Cu_OCH2 ~ Cu_HCOH      : U0 = +nan
+     Cu_HCOH ~ Cu_C         : U0 = +nan
+        Cu_C ~ Cu_OCH3      : U0 = +1.10
+     Cu_OCH3 ~ Cu_CH2OH     : U0 = +nan
+    Cu_CH2OH ~ Cu_CH        : U0 = +nan
+       Cu_CH ~ Cu_O         : U0 = +0.75
+        Cu_O ~ Cu_CH2       : U0 = +nan
+      Cu_CH2 ~ Cu_OH        : U0 = +1.59
+       Cu_OH ~ Cu_CH3       : U0 = +nan
+      Cu_CH3 ~ Cu_H         : U0 = -0.33
+        Cu_H ~ Cu_H2O       : U0 = -0.22
+      Cu_H2O ~ Cu_H2O       : U0 = +0.20
+      Cu_H2O ~ Cu_CO2       : U0 = -0.36
+      Cu_CO2 ~ Cu_H2C_O2H2  : U0 = -0.57
+ Cu_H2C_O2H2 ~ Cu_OH        : U0 = +0.41
+
+Surface: AgCu
+   AgCu_HOCO ~ AgCu_HCOOH   : U0 = +0.11
+  AgCu_HCOOH ~ AgCu_CO      : U0 = +nan
+     AgCu_CO ~ AgCu_HCO     : U0 = -1.11
+    AgCu_HCO ~ AgCu_COH     : U0 = +nan
+    AgCu_COH ~ AgCu_OCH2    : U0 = +0.13
+   AgCu_OCH2 ~ AgCu_HCOH    : U0 = +nan
+   AgCu_HCOH ~ AgCu_C       : U0 = +nan
+      AgCu_C ~ AgCu_OCH3    : U0 = +1.56
+   AgCu_OCH3 ~ AgCu_CH2OH   : U0 = +nan
+  AgCu_CH2OH ~ AgCu_CH      : U0 = +nan
+     AgCu_CH ~ AgCu_O       : U0 = +0.98
+      AgCu_O ~ AgCu_CH2     : U0 = +nan
+    AgCu_CH2 ~ AgCu_OH      : U0 = +1.49
+     AgCu_OH ~ AgCu_CH3     : U0 = +nan
+    AgCu_CH3 ~ AgCu_H       : U0 = -0.35
+      AgCu_H ~ AgCu_H2O     : U0 = -0.21
+    AgCu_H2O ~ AgCu_H2O     : U0 = +0.20
+    AgCu_H2O ~ AgCu_CO2     : U0 = -0.36
+    AgCu_CO2 ~ AgCu_H2C_O2H2 : U0 = -0.57
+AgCu_H2C_O2H2 ~ AgCu_OH      : U0 = +0.07
+
+Surface: AuCu
+   AuCu_HOCO ~ AuCu_HCOOH   : U0 = +0.36
+  AuCu_HCOOH ~ AuCu_CO      : U0 = +nan
+     AuCu_CO ~ AuCu_HCO     : U0 = -0.98
+    AuCu_HCO ~ AuCu_COH     : U0 = +nan
+    AuCu_COH ~ AuCu_OCH2    : U0 = +0.28
+   AuCu_OCH2 ~ AuCu_HCOH    : U0 = +nan
+   AuCu_HCOH ~ AuCu_C       : U0 = +nan
+      AuCu_C ~ AuCu_OCH3    : U0 = +1.52
+   AuCu_OCH3 ~ AuCu_CH2OH   : U0 = +nan
+  AuCu_CH2OH ~ AuCu_CH      : U0 = +nan
+     AuCu_CH ~ AuCu_O       : U0 = +0.93
+      AuCu_O ~ AuCu_CH2     : U0 = +nan
+    AuCu_CH2 ~ AuCu_OH      : U0 = +1.33
+     AuCu_OH ~ AuCu_CH3     : U0 = +nan
+    AuCu_CH3 ~ AuCu_H       : U0 = -0.35
+      AuCu_H ~ AuCu_H2O     : U0 = -0.20
+    AuCu_H2O ~ AuCu_H2O     : U0 = +0.20
+    AuCu_H2O ~ AuCu_CO2     : U0 = -0.36
+    AuCu_CO2 ~ AuCu_H2C_O2H2 : U0 = -0.57
+AuCu_H2C_O2H2 ~ AuCu_OH      : U0 = -0.12
+
+Surface: PdCu
+   PdCu_HOCO ~ PdCu_HCOOH   : U0 = +0.07
+  PdCu_HCOOH ~ PdCu_CO      : U0 = +nan
+     PdCu_CO ~ PdCu_HCO     : U0 = -1.12
+    PdCu_HCO ~ PdCu_COH     : U0 = +nan
+    PdCu_COH ~ PdCu_OCH2    : U0 = +0.15
+   PdCu_OCH2 ~ PdCu_HCOH    : U0 = +nan
+   PdCu_HCOH ~ PdCu_C       : U0 = +nan
+      PdCu_C ~ PdCu_OCH3    : U0 = +0.37
+   PdCu_OCH3 ~ PdCu_CH2OH   : U0 = +nan
+  PdCu_CH2OH ~ PdCu_CH      : U0 = +nan
+     PdCu_CH ~ PdCu_O       : U0 = +0.39
+      PdCu_O ~ PdCu_CH2     : U0 = +nan
+    PdCu_CH2 ~ PdCu_OH      : U0 = +1.18
+     PdCu_OH ~ PdCu_CH3     : U0 = +nan
+    PdCu_CH3 ~ PdCu_H       : U0 = -0.35
+      PdCu_H ~ PdCu_H2O     : U0 = -0.22
+    PdCu_H2O ~ PdCu_H2O     : U0 = +0.20
+    PdCu_H2O ~ PdCu_CO2     : U0 = -0.36
+    PdCu_CO2 ~ PdCu_H2C_O2H2 : U0 = -0.57
+PdCu_H2C_O2H2 ~ PdCu_OH      : U0 = -0.06
+
+Surface: PtCu
+   PtCu_HOCO ~ PtCu_HCOOH   : U0 = -0.44
+  PtCu_HCOOH ~ PtCu_CO      : U0 = +nan
+     PtCu_CO ~ PtCu_HCO     : U0 = -1.14
+    PtCu_HCO ~ PtCu_COH     : U0 = +nan
+    PtCu_COH ~ PtCu_OCH2    : U0 = -0.47
+   PtCu_OCH2 ~ PtCu_HCOH    : U0 = +nan
+   PtCu_HCOH ~ PtCu_C       : U0 = +nan
+      PtCu_C ~ PtCu_OCH3    : U0 = -0.31
+   PtCu_OCH3 ~ PtCu_CH2OH   : U0 = +nan
+  PtCu_CH2OH ~ PtCu_CH      : U0 = +nan
+     PtCu_CH ~ PtCu_O       : U0 = -0.21
+      PtCu_O ~ PtCu_CH2     : U0 = +nan
+    PtCu_CH2 ~ PtCu_OH      : U0 = +0.69
+     PtCu_OH ~ PtCu_CH3     : U0 = +nan
+    PtCu_CH3 ~ PtCu_H       : U0 = -0.32
+      PtCu_H ~ PtCu_H2O     : U0 = -0.24
+    PtCu_H2O ~ PtCu_H2O     : U0 = +0.20
+    PtCu_H2O ~ PtCu_CO2     : U0 = -0.36
+    PtCu_CO2 ~ PtCu_H2C_O2H2 : U0 = -0.57
+PtCu_H2C_O2H2 ~ PtCu_OH      : U0 = -0.07
+
+Surface: NiCu
+   NiCu_HOCO ~ NiCu_HCOOH   : U0 = -0.39
+  NiCu_HCOOH ~ NiCu_CO      : U0 = +nan
+     NiCu_CO ~ NiCu_HCO     : U0 = -1.34
+    NiCu_HCO ~ NiCu_COH     : U0 = +nan
+    NiCu_COH ~ NiCu_OCH2    : U0 = -0.31
+   NiCu_OCH2 ~ NiCu_HCOH    : U0 = +nan
+   NiCu_HCOH ~ NiCu_C       : U0 = +nan
+      NiCu_C ~ NiCu_OCH3    : U0 = -0.10
+   NiCu_OCH3 ~ NiCu_CH2OH   : U0 = +nan
+  NiCu_CH2OH ~ NiCu_CH      : U0 = +nan
+     NiCu_CH ~ NiCu_O       : U0 = +0.11
+      NiCu_O ~ NiCu_CH2     : U0 = +nan
+    NiCu_CH2 ~ NiCu_OH      : U0 = +1.27
+     NiCu_OH ~ NiCu_CH3     : U0 = +nan
+    NiCu_CH3 ~ NiCu_H       : U0 = -0.32
+      NiCu_H ~ NiCu_H2O     : U0 = -0.25
+    NiCu_H2O ~ NiCu_H2O     : U0 = +0.20
+    NiCu_H2O ~ NiCu_CO2     : U0 = -0.36
+    NiCu_CO2 ~ NiCu_H2C_O2H2 : U0 = -0.57
+NiCu_H2C_O2H2 ~ NiCu_OH      : U0 = +0.53
+
+Surface: CoCu
+   CoCu_HOCO ~ CoCu_HCOOH   : U0 = -0.55
+  CoCu_HCOOH ~ CoCu_CO      : U0 = +nan
+     CoCu_CO ~ CoCu_HCO     : U0 = -1.21
+    CoCu_HCO ~ CoCu_COH     : U0 = +nan
+    CoCu_COH ~ CoCu_OCH2    : U0 = -0.56
+   CoCu_OCH2 ~ CoCu_HCOH    : U0 = +nan
+   CoCu_HCOH ~ CoCu_C       : U0 = +nan
+      CoCu_C ~ CoCu_OCH3    : U0 = +0.87
+   CoCu_OCH3 ~ CoCu_CH2OH   : U0 = +nan
+  CoCu_CH2OH ~ CoCu_CH      : U0 = +nan
+     CoCu_CH ~ CoCu_O       : U0 = +0.29
+      CoCu_O ~ CoCu_CH2     : U0 = +nan
+    CoCu_CH2 ~ CoCu_OH      : U0 = +1.22
+     CoCu_OH ~ CoCu_CH3     : U0 = +nan
+    CoCu_CH3 ~ CoCu_H       : U0 = -0.33
+      CoCu_H ~ CoCu_H2O     : U0 = -0.24
+    CoCu_H2O ~ CoCu_H2O     : U0 = +0.20
+    CoCu_H2O ~ CoCu_CO2     : U0 = -0.36
+    CoCu_CO2 ~ CoCu_H2C_O2H2 : U0 = -0.57
+CoCu_H2C_O2H2 ~ CoCu_OH      : U0 = +0.75
+
+Surface: RhCu
+   RhCu_HOCO ~ RhCu_HCOOH   : U0 = -0.48
+  RhCu_HCOOH ~ RhCu_CO      : U0 = +nan
+     RhCu_CO ~ RhCu_HCO     : U0 = -1.26
+    RhCu_HCO ~ RhCu_COH     : U0 = +nan
+    RhCu_COH ~ RhCu_OCH2    : U0 = -0.92
+   RhCu_OCH2 ~ RhCu_HCOH    : U0 = +nan
+   RhCu_HCOH ~ RhCu_C       : U0 = +nan
+      RhCu_C ~ RhCu_OCH3    : U0 = -0.84
+   RhCu_OCH3 ~ RhCu_CH2OH   : U0 = +nan
+  RhCu_CH2OH ~ RhCu_CH      : U0 = +nan
+     RhCu_CH ~ RhCu_O       : U0 = -0.30
+      RhCu_O ~ RhCu_CH2     : U0 = +nan
+    RhCu_CH2 ~ RhCu_OH      : U0 = +0.76
+     RhCu_OH ~ RhCu_CH3     : U0 = +nan
+    RhCu_CH3 ~ RhCu_H       : U0 = -0.35
+      RhCu_H ~ RhCu_H2O     : U0 = -0.27
+    RhCu_H2O ~ RhCu_H2O     : U0 = +0.20
+    RhCu_H2O ~ RhCu_CO2     : U0 = -0.36
+    RhCu_CO2 ~ RhCu_H2C_O2H2 : U0 = -0.57
+RhCu_H2C_O2H2 ~ RhCu_OH      : U0 = +0.25
+
+Surface: IrCu
+   IrCu_HOCO ~ IrCu_HCOOH   : U0 = -0.86
+  IrCu_HCOOH ~ IrCu_CO      : U0 = +nan
+     IrCu_CO ~ IrCu_HCO     : U0 = -0.71
+    IrCu_HCO ~ IrCu_COH     : U0 = +nan
+    IrCu_COH ~ IrCu_OCH2    : U0 = -0.57
+   IrCu_OCH2 ~ IrCu_HCOH    : U0 = +nan
+   IrCu_HCOH ~ IrCu_C       : U0 = +nan
+      IrCu_C ~ IrCu_OCH3    : U0 = -0.65
+   IrCu_OCH3 ~ IrCu_CH2OH   : U0 = +nan
+  IrCu_CH2OH ~ IrCu_CH      : U0 = +nan
+     IrCu_CH ~ IrCu_O       : U0 = +0.08
+      IrCu_O ~ IrCu_CH2     : U0 = +nan
+    IrCu_CH2 ~ IrCu_OH      : U0 = -0.54
+     IrCu_OH ~ IrCu_CH3     : U0 = +nan
+    IrCu_CH3 ~ IrCu_H       : U0 = -0.15
+      IrCu_H ~ IrCu_H2O     : U0 = -0.27
+    IrCu_H2O ~ IrCu_H2O     : U0 = +0.20
+    IrCu_H2O ~ IrCu_CO2     : U0 = -0.36
+    IrCu_CO2 ~ IrCu_H2C_O2H2 : U0 = -0.57
+IrCu_H2C_O2H2 ~ IrCu_OH      : U0 = +0.41
+

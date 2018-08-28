@@ -1,0 +1,22 @@
+    state_1Cu     =  Cu_HOCO  + thermal_HOCO  						            + 7.*elec  -ref;
+    state_HCOOHCu =                                              HCOOH_poten    + 6.*elec  -ref;
+    state_2Cu     =  Cu_CO    + thermal_CO    +   H2O_poten                     + 6.*elec  -ref;
+    state_3Cu     =  Cu_HCO   + thermal_HCO   +   H2O_poten                     + 5.*elec  -ref;
+    state_4Cu     =  Cu_COH   + thermal_COH   +   H2O_poten                     + 5.*elec  -ref;
+    state_5Cu     =  Cu_OCH2  + thermal_OCH2  +   H2O_poten                     + 4.*elec  -ref;
+    state_6Cu     =  Cu_HCOH  + thermal_HCOH  +   H2O_poten                     + 4.*elec  -ref;
+    state_7Cu     =  Cu_C     + thermal_C     + 2*H2O_poten                     + 4.*elec  -ref;
+    state_8Cu     =  Cu_OCH3  + thermal_OCH3  +   H2O_poten                     + 3.*elec  -ref;
+    state_9Cu     =  Cu_CH2OH + thermal_CH2OH +   H2O_poten                     + 3.*elec  -ref;
+    state_10Cu    =  Cu_CH    + thermal_CH    + 2*H2O_poten                     + 3.*elec  -ref;
+    state_11Cu    =  Cu_O     + thermal_O     +   H2O_poten +      CH4_poten    + 2.*elec  -ref;
+    state_12Cu    =  Cu_CH2   + thermal_CH2   + 2*H2O_poten                     + 2.*elec  -ref;
+    state_13Cu    =  Cu_OH    + thermal_OH    +   H2O_poten +      CH4_poten    + 1.*elec  -ref; 
+    state_14Cu    =  Cu_CH3   + thermal_CH3   + 2*H2O_poten                     + 1.*elec  -ref;
+    state_15Cu    =  Cu_H     + thermal_H     +                    CO2_poten    + 7.*elec  -ref;
+    state_CH4Cu   =           				  + 2*H2O_poten +      CH4_poten               -ref;
+    state_CH3OHCu =                           +   H2O_poten +    CH3OH_poten    + 2.*elec  -ref;
+    state_H2Cu    =                           +   CO2_poten +       H2_poten    + 6.*elec  -ref;
+    state_diolCu  =                                           H2C_O2H2_poten    + 4.*elec  -ref;
+    state_16Cu    =  Cu_OH   + thermal_OH                      + CH3OH_poten    + 3.*elec  -ref;
+	

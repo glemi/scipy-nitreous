@@ -1,81 +1,97 @@
-import testcases
-import scipy.optimize
-import numpy
+import builtins
 from matplotlib import pyplot as plt
 
+def plot(seq):
+    builtins.print('')
+    builtins.print("Plotting " + seq.title)
 
-def calc_stuff(sys):
-    class result:
-        def __init__(self, sys, Urange=numpy.arange(-2, 2, 0.1)):
-            n = len(sys)
-            self.n = n
-            self.Urange = numpy.arange(-2, 2, 0.1)
-            self.U0 = numpy.ones(n - 1) * numpy.nan
-            self.G = numpy.ones([n-1, Urange.size]) * numpy.nan
-            self.Gi = numpy.ones(n - 1) * numpy.nan
-            self.dG0 = numpy.ones(n - 1) * numpy.nan
-            self.indices = range(0, n - 1)
-
-    def find_intersect(sys1, sys2):
-        def deltaG(U):
-            G1 = sys1.calc_energy(U)
-            G2 = sys2.calc_energy(U)
-            return numpy.abs(G1-G2)
-        result = scipy.optimize.minimize_scalar(deltaG)
-        if deltaG(result.x) > 0.01:
-            return numpy.nan
-        else:
-            return result.x
-
-    r = result(sys)
-    # https://matplotlib.org/tutorials/intermediate/color_cycle.html
-    for i in r.indices:
-        sys1 = sys[i]
-        sys2 = sys[i + 1]
-        r.U0[i] = find_intersect(sys1, sys2)
-        r.Gi[i] = sys1.calc_energy(r.U0[i])
-        r.dG0[i] = sys1.calc_energy(0) - sys2.calc_energy(0)
-        r.G[i, :] = sys1.calc_energy(r.Urange)
-        print('%12s ~ %-12s : U0 = %+.2f' % (sys1.name, sys2.name, r.U0[i]))
-
-    return r
-
-
-def plot(surface_name):
-    print('')
-    print('Surface: ' + surface_name)
-    sys = testcases.define_systems(surface_name)
-    res = calc_stuff(sys)
-
-    plt.figure(surface_name, figsize=(12,8))
+    plt.figure(seq.surface, figsize=(12,8))
     ax = plt.subplot(221)
 
-    plt.stem(res.U0, res.Gi)
+    plt.stem(seq.Ui, seq.Gi)
     ax.set_ylabel('$G$ at $(\Delta G = 0)$')
     ax.set_title('Intersection points where $\Delta G = 0$')
     ax.axhline(y=0, color='r')
 
     ax = plt.subplot(222)
-    plt.stem(res.indices, res.Gi)
-    ax.set_xticks(res.indices)
+    plt.stem(seq.tindices, seq.Gi)
+    ax.set_xticks(seq.sindices)
     ax.set_ylabel('$G$ at $(\Delta G = 0)$')
     ax.set_title('Intersection points by reaction step')
     ax.axhline(y=0, color='r')
 
     ax = plt.subplot(223)
-    for i in res.indices:
-        plt.plot(res.Urange, res.G[i,:])
-    plt.plot(res.U0, res.Gi, 'o')
+    for i in seq.sindices:
+        plt.plot(seq.U, seq.G[i,:])
+    plt.plot(seq.Ui, seq.Gi, 'o')
     ax.set_title('G(U) with intersection points marked')
     ax.set_xlabel('$U_0$')
     ax.set_ylabel('$G$')
 
     ax = plt.subplot(224)
-    plt.stem(res.indices, res.dG0)
+    plt.stem(seq.tindices, seq.dG0)
     ax.set_xlabel('step')
     ax.set_ylabel('$\Delta G$ at $(U = 0)$')
-    ax.set_xticks(res.indices)
+    ax.set_xticks(seq.tindices)
     ax.set_title('$\Delta G$ at ($U = 0$) by reaction step')
     ax.axhline(y=0, color='r')
 
-    plt.suptitle(surface_name)
+    plt.suptitle(seq.title)
+
+def print(seq):
+    builtins.print('')
+    builtins.print(seq.title)
+    builtins.print('')
+
+    title = "%-41s : %8s %8s %8s \n" % (seq.title, "deltaG_0", "U_i", "G_i")
+    builtins.print(title)
+    for i, t in enumerate(seq.transitions):
+        values = "%8.2f %8.2f %8.2f" % (t.dG0, t.Ui, t.Gi)
+        line = "%2d  %16s --> %-16s : %s" % (i, t.step1.name, t.step2.name, values)
+        builtins.print(line)
+
+    builtins.print('')
+    title = "%-41s : %8s \n" % (seq.title, "G(U=0)")
+    builtins.print(title)
+    for i, s in enumerate(seq.steps):
+        line = "%2d  %37s : %8.2f" % (i, s.name , s.calc_energy(0))
+        builtins.print(line)
+
+
+def plot_G(seq):
+    print('')
+    print(seq.title)
+
+    plt.figure(seq.surface, figsize=(12,8))
+    ax = plt.subplot(221)
+
+    plt.stem(seq.Ui, seq.Gi)
+    ax.set_ylabel('$G$ at $(\Delta G = 0)$')
+    ax.set_title('Intersection points where $\Delta G = 0$')
+    ax.axhline(y=0, color='r')
+
+    ax = plt.subplot(222)
+    plt.stem(seq.tindices, seq.Gi)
+    ax.set_xticks(seq.sindices)
+    ax.set_ylabel('$G$ at $(\Delta G = 0)$')
+    ax.set_title('Intersection points by reaction step')
+    ax.axhline(y=0, color='r')
+
+    ax = plt.subplot(223)
+    for i in seq.sindices:
+        plt.plot(seq.U, seq.G[i,:])
+    plt.plot(seq.Ui, seq.Gi, 'o')
+    ax.set_title('G(U) with intersection points marked')
+    ax.set_xlabel('$U_0$')
+    ax.set_ylabel('$G$')
+
+    ax = plt.subplot(224)
+    plt.stem(seq.tindices, seq.dG0)
+    ax.set_xlabel('step')
+    ax.set_ylabel('$\Delta G$ at $(U = 0)$')
+    ax.set_xticks(seq.tindices)
+    ax.set_title('$\Delta G$ at ($U = 0$) by reaction step')
+    ax.axhline(y=0, color='r')
+
+    plt.suptitle(seq.title)
+

@@ -74,11 +74,11 @@ class sequence:
     def calculate(self, U = numpy.arange(-2, 2, 0.1)):
         ns = self.nsteps()
         nt = self.ntrans()
-        m  = U.size
+        m  = len(U)
 
         # initialize everything with nan values
         # NaN (Not-A-Number) represents an undefined value
-        self.U = U
+        self.U = numpy.array(U)
         self.G = numpy.ones([ns, m]) * numpy.nan
 
         self.Ui  = numpy.ones(nt) * numpy.nan
@@ -95,8 +95,8 @@ class sequence:
             self.dG0[i] = t.dG0
 
         for i, s in enumerate(self.steps):
-            self.G[i,:] = s.calc_energy(U)
-            self.G0     = s.calc_energy(0)
+            self.G[i,:] = s.calc_energy(self.U)
+            self.G0     = s.calc_energy(self.U)
 
 
 

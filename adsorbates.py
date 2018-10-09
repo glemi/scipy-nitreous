@@ -2,6 +2,7 @@ all = dict()
 
 class adsorbate:
     def __init__(self, name, zpe, CpdT, minusTS):
+        self.name = name
         self.zpe = zpe
         self.CpdT = CpdT
         self.minusTS = minusTS
@@ -25,6 +26,13 @@ ads_CH    = adsorbate('CH',      0.348217,         0.027848, -0.039143)
 ads_C     = adsorbate('C',       0.096609,         0.017357, -0.025197)
 ads_CH2   = adsorbate('CH2',     0.589369,         0.049158, -0.075322)
 ads_CH3   = adsorbate('CH3',     0.900309,         0.059646, -0.09646)
+
+# added by Jo 02.10.2018
+ads_N2O  = adsorbate('N2O',    0,    0,    0)
+ads_N2   = adsorbate('N2',     0,    0,    0)
+ads_O    = adsorbate('O',      0,    0,    0)  # overrides previous entry
+ads_OH   = adsorbate('OH',     0,    0,    0)  # overrides previous entry
+ads_H    = adsorbate('H',      0,    0,    0)  # overrides previous entry
 
 #####################################################
 #Cu
@@ -189,3 +197,100 @@ ads_CH2  .deltaE['IrCu'] = -17.5478
 ads_CH3  .deltaE['IrCu'] = -21.4278
 ads_CH2OH.deltaE['IrCu'] = -27.3107
 
+# new by Jo, 02.10.2018
+#####################################################
+#Mo
+#####################################################
+ads_N2O.deltaE['Mo'] = -21.589723  #delga G value
+ads_N2 .deltaE['Mo'] = -17.382936
+ads_O  .deltaE['Mo'] = -9.064903
+ads_OH .deltaE['Mo'] = -11.845290
+ads_H  .deltaE['Mo'] = -4.013046
+#####################################################
+#Ni
+#####################################################
+ads_N2O.deltaE['Ni'] = -19.819434  #delga G value
+ads_N2 .deltaE['Ni'] = -17.174128
+ads_O  .deltaE['Ni'] = -7.259955
+ads_OH .deltaE['Ni'] = -10.781557
+ads_H  .deltaE['Ni'] = -3.859444
+#####################################################
+#Pd
+#####################################################
+ads_N2O.deltaE['Pd'] = -21.567071  #delga G value
+ads_N2 .deltaE['Pd'] = -17.037934
+ads_O  .deltaE['Pd'] = -6.286974
+ads_OH .deltaE['Pd'] = -10.018435
+ads_H  .deltaE['Pd'] = -3.862150
+#####################################################
+#Pt
+#####################################################
+ads_N2O.deltaE['Pt'] = -21.460470  #delga G value
+ads_N2 .deltaE['Pt'] = -16.887591
+ads_O  .deltaE['Pt'] = -6.001339
+ads_OH .deltaE['Pt'] = -9.693757
+ads_H  .deltaE['Pt'] = -3.738993
+#####################################################
+#Fe
+#####################################################
+ads_N2O.deltaE['Fe'] = -22.370671  #delga G value
+ads_N2 .deltaE['Fe'] = -17.224028
+ads_O  .deltaE['Fe'] = -8.260101
+ads_OH .deltaE['Fe'] = -11.455613
+ads_H  .deltaE['Fe'] = -4.173438
+#####################################################
+#Cu
+#####################################################
+ads_N2O.deltaE['Cu'] = -21.438343  #delga G value
+ads_N2 .deltaE['Cu'] = -16.743412
+ads_O  .deltaE['Cu'] = -6.493218
+ads_OH .deltaE['Cu'] = -10.524265
+ads_H  .deltaE['Cu'] = -3.530473
+#####################################################
+#Au
+#####################################################
+ads_N2O.deltaE['Au'] = -21.472978  #delga G value
+ads_N2 .deltaE['Au'] = -16.641096
+ads_O  .deltaE['Au'] = -5.068474
+ads_OH .deltaE['Au'] = -9.574697
+ads_H  .deltaE['Au'] = -3.307320
+#####################################################
+#Ag
+#####################################################
+ads_N2O.deltaE['Ag'] = -21.468197  #delga G value
+ads_N2 .deltaE['Ag'] = -16.732422
+ads_O  .deltaE['Ag'] = -5.530159
+ads_OH .deltaE['Ag'] = -10.111855
+ads_H  .deltaE['Ag'] = -3.110078
+#####################################################
+#Sn
+#####################################################
+ads_N2O.deltaE['Sn'] = -21.686143  #delga G value
+ads_N2 .deltaE['Sn'] = -17.113646
+ads_O  .deltaE['Sn'] = -7.189941
+ads_OH .deltaE['Sn'] = -10.666063
+ads_H  .deltaE['Sn'] = -3.030966
+#####################################################
+#Ti
+#####################################################
+ads_N2O.deltaE['Ti'] = -23.616685  #delga G value
+ads_N2 .deltaE['Ti'] = -17.384115
+ads_O  .deltaE['Ti'] = -10.774389
+ads_OH .deltaE['Ti'] = -13.109736
+ads_H  .deltaE['Ti'] = -4.356588
+#####################################################
+#In
+#####################################################
+ads_N2O.deltaE['In'] = -22.705992  #delga G value
+ads_N2 .deltaE['In'] = -18.069645
+ads_O  .deltaE['In'] = -8.209759
+ads_OH .deltaE['In'] = -11.891404
+ads_H  .deltaE['In'] = -4.064961
+#####################################################
+#Zn
+#####################################################
+ads_N2O.deltaE['Zn'] = -18.189916  #delga G value
+ads_N2 .deltaE['Zn'] = -16.681088
+ads_O  .deltaE['Zn'] = -6.622997
+ads_OH .deltaE['Zn'] = -10.212798
+ads_H  .deltaE['Zn'] = -2.621970

@@ -99,7 +99,6 @@ class sequence:
             self.G0     = s.calc_energy(self.U)
 
 
-
 def electroreduction(surface):
     seq = sequence(surface, 'Electroreduction')
 
@@ -126,5 +125,35 @@ def electroreduction(surface):
     seq.add_step( None,      ['H2C_O2H2'],          4 )
     seq.add_step( 'OH',      ['CH3OH'],             3 )
 
+    return seq
+
+
+def eloreduction_pathA(surface):
+    seq = sequence(surface, 'Electroreduction Path A')
+    #            adsorbate   gases        num/electrons
+    seq.add_step( None,         ['N2O'], 2)
+    seq.add_step( 'N2O',        [],      2)
+    seq.add_step( ['N2', 'O'],  [],      2)
+    seq.add_step( ['N2', 'OH'], [],      1)
+    seq.add_step( 'N2',         ['H2O'], 0)
+    seq.add_step( None,         ['N2', 'H2O'], 0)
+    return seq
+
+def eloreduction_pathB(surface):
+    seq = sequence(surface, 'Electroreduction Path B')
+    #            adsorbate   gases        num/electrons
+    seq.add_step( None,         ['N2O'], 2)
+    seq.add_step( 'N2O',        [],      2)
+    seq.add_step( 'OH',         ['N2'],  1)
+    seq.add_step( None,         ['N2', 'H2O'], 0)
+    return seq
+
+def eloreduction_pathC(surface):
+    seq = sequence(surface, 'Electroreduction Path C')
+    #            adsorbate   gases        num/electrons
+    seq.add_step(None, ['N2O'], 2)
+    seq.add_step('N2O', [], 2)
+    seq.add_step('OH', ['N2'], 1)
+    seq.add_step(None, ['N2', 'H2O'], 0)
     return seq
 

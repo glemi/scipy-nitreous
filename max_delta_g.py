@@ -5,7 +5,7 @@ import surf_summary
 from matplotlib import pyplot as plt
 
 
-def plot(surfnames):
+def plot(sequence, surfnames):
     n = len(surfnames)
     indices = numpy.arange(0,n,1)
     maxDG = numpy.ones(n) * numpy.nan
@@ -14,7 +14,7 @@ def plot(surfnames):
     minU0 = numpy.ones(n) * numpy.nan
 
     for index, surfname in enumerate(surfnames):
-        seq = sequences.electroreduction(surfname)
+        seq = sequence(surfname)
         seq.calculate()
 
         maxDG[index] = numpy.nanmax(seq.dG0)
@@ -25,7 +25,7 @@ def plot(surfnames):
     # this line is necessary to compensate for a bug in the x tick labelling
     surfnames = [surfnames[0]] + surfnames
 
-    plt.figure('MaxG', figsize=(12,8))
+    fig = plt.figure('MaxG'+seq.name, figsize=(12,8))
     ax = plt.subplot(221)
     plt.stem(indices, maxDG)
     ax.set_xticklabels(surfnames)
@@ -46,11 +46,11 @@ def plot(surfnames):
     ax.set_xticklabels(surfnames)
     ax.set_title('Minimum $U_i$ (at $\Delta G = 0$)')
 
-    plt.suptitle('Maxima and Minima of G / U among reaction steps of each surface')
+    plt.suptitle('Maxima and Minima of G / U among reaction steps of each surface\n' + seq.name)
+    return fig
+    #plt.show(block=False)
 
-    plt.show()
-
-def newplot(surfnames):
+def newplot(sequence, surfnames):
     n = len(surfnames)
     indices = numpy.arange(0, n, 1)
     maxDG = numpy.ones(n) * numpy.nan
@@ -59,7 +59,7 @@ def newplot(surfnames):
     minUi = numpy.ones(n) * numpy.nan
 
     for index, surfname in enumerate(surfnames):
-        seq = sequences.electroreduction(surfname)
+        seq = sequence(surfname)
         seq.calculate()
 
         maxDG[index] = numpy.nanmax(seq.dG0)
@@ -75,7 +75,7 @@ def newplot(surfnames):
     # this line is necessary to compensate for a bug in the x tick labelling
     surfnames = [surfnames[0]] + surfnames
 
-    plt.figure('MaxG', figsize=(12, 8))
+    fig = plt.figure('MaxG'+seq.name, figsize=(12, 8))
     ax = plt.subplot(221)
     plt.stem(indices, maxDG)
     ax.set_xticklabels(surfnames)
@@ -96,6 +96,6 @@ def newplot(surfnames):
     ax.set_xticklabels(surfnames)
     ax.set_title('Minimum $U_i$ (at $\Delta G = 0$)')
 
-    plt.suptitle('Maxima and Minima of G / U among reaction steps of each surface')
-
-    plt.show()
+    plt.suptitle('Maxima and Minima of G / U among reaction steps of each surface\n' + seq.name)
+    return fig
+    #plt.show(block=False)

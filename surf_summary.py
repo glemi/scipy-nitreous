@@ -1,10 +1,10 @@
-from builtins import print as bprint
+#from builtins import print as bprint
 #from __builtin__ import print as bprint
 from matplotlib import pyplot as plt
 
 def plot(seq):
-    bprint('')
-    bprint("Plotting " + seq.title)
+    print('')
+    print("Plotting " + seq.title)
 
     plt.figure(seq.surface, figsize=(12,8))
     ax = plt.subplot(221)
@@ -39,29 +39,29 @@ def plot(seq):
 
     plt.suptitle(seq.title)
 
-def print(seq):
-    bprint('')
-    bprint(seq.title)
-    bprint('')
+def disp(seq):
+    print('')
+    print(seq.title)
+    print('')
 
     title = "%-41s : %8s %8s %8s \n" % (seq.title, "deltaG_0", "U_i", "G_i")
-    bprint(title)
+    print(title)
     for i, t in enumerate(seq.transitions):
         values = "%8.2f %8.2f %8.2f" % (t.dG0, t.Ui, t.Gi)
         line = "%2d  %16s --> %-16s : %s" % (i, t.step1.name, t.step2.name, values)
-        bprint(line)
+        print(line)
 
-    bprint('')
+    print('')
     title = "%-41s : %8s \n" % (seq.title, "G(U=0)")
-    bprint(title)
+    print(title)
     for i, s in enumerate(seq.steps):
         line = "%2d  %37s : %8.2f" % (i, s.name , s.calc_energy(0))
-        bprint(line)
+        print(line)
 
 
 def plot_G(seq):
-    bprint('')
-    bprint(seq.title)
+    print('')
+    print(seq.title)
 
     plt.figure(seq.surface, figsize=(12,8))
     ax = plt.subplot(221)
